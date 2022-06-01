@@ -100,6 +100,8 @@ const Breadcrumb: React.FC<Props> = ({
           decodedName = name
         }
 
+        const [, parentCategory, childrenCategory] = href.split("/");
+        const queryParams = childrenCategory ? `?initialMap=c&initialQuery=${parentCategory}&map=category-1,category-2&order=OrderByTopSaleDESC` : "";
         return (
           <span
             key={`navigation-item-${i}`}
@@ -114,7 +116,7 @@ const Breadcrumb: React.FC<Props> = ({
                 handles.link,
                 (i + 1).toString()
               )} ${linkBaseClasses}`}
-              to={href}
+              to={`${href}${queryParams}`}
               // See https://github.com/vtex-apps/breadcrumb/pull/66 for the reasoning behind this
               waitToPrefetch={1200}
             >

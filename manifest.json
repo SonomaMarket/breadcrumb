@@ -1,7 +1,7 @@
 {
-  "vendor": "vtex",
+  "vendor": "sonoma",
   "name": "breadcrumb",
-  "version": "1.9.4",
+  "version": "0.0.1",
   "title": "VTEX Breadcrumb",
   "description": "Breadcrumb Component",
   "defaultLocale": "pt-BR",
